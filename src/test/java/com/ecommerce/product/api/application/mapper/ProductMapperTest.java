@@ -16,7 +16,6 @@ class ProductMapperTest {
         CreateProductCommand createProductCommand = ProductFactory.createProductCommand();
         Product entity = productMapper.toEntityCreate(createProductCommand);
         Assertions.assertEquals(createProductCommand.name(), entity.getName());
-        Assertions.assertEquals(createProductCommand.quantity(), entity.getQuantity());
     }
 
     @Test

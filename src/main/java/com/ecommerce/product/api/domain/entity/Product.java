@@ -30,10 +30,6 @@ public class Product {
     private String name;
 
     @NotNull
-    @Column(name = "quantity")
-    private Long quantity;
-
-    @NotNull
     @Column(name = "price")
     private BigDecimal price;
 

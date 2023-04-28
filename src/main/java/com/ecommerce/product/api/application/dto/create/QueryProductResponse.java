@@ -7,12 +7,6 @@ import java.math.BigDecimal;
 public record QueryProductResponse(
 
     @NotNull
-    String name,
-
-    @NotNull
-    Long quantity,
-
-    @NotNull
     BigDecimal price
 
 ) {

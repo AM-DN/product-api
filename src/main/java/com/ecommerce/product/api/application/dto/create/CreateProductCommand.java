@@ -6,14 +6,11 @@ import java.math.BigDecimal;
 
 public record CreateProductCommand(
 
-    @NotNull(message = "name must be informed")
+    @NotNull(message = "name must be informed") 
     String name,
 
     @NotNull(message = "price must be informed")
-    BigDecimal price,
-
-    @NotNull(message = "quantity must be informed")
-    Long quantity
+    BigDecimal price
 ) {
 
 }

@@ -14,13 +14,12 @@ public final class ProductFactory {
               .id(1L)
               .productId(UUID.randomUUID())
               .name("MackBook")
-              .quantity(4L)
               .price(new BigDecimal(5000))
               .build();
     }
 
     public static CreateProductCommand createProductCommand() {
-        return new CreateProductCommand("Macbook", new BigDecimal(23), 4L);
+        return new CreateProductCommand("Macbook", new BigDecimal(23));
     }
 
     public static CreateProductResponse createProductResponse() {
@@ -32,7 +31,6 @@ public final class ProductFactory {
                 .id(1L)
                 .productId(null)
                 .name("Macbook")
-                .quantity(1L)
                 .price(new BigDecimal(5000))
                 .build();
     }
