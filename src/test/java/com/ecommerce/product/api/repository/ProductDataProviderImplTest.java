@@ -26,7 +26,6 @@ class ProductDataProviderImplTest {
         Assertions.assertEquals(product.getId(), savedOrder.getId());
         Assertions.assertEquals(product.getProductId(), savedOrder.getProductId());
         Assertions.assertEquals(product.getName(), savedOrder.getName());
-        Assertions.assertEquals(product.getQuantity(), savedOrder.getQuantity());
         Assertions.assertEquals(product.getPrice(), savedOrder.getPrice());
     }
 

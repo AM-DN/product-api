@@ -16,7 +16,6 @@ public class ProductMapperImpl implements ProductMapper {
         return Product.builder()
                 .productId(UUID.randomUUID())
                 .name(createProductCommand.name())
-                .quantity(createProductCommand.quantity())
                 .price(createProductCommand.price())
                 .build();
     }
@@ -29,8 +28,6 @@ public class ProductMapperImpl implements ProductMapper {
     @Override
     public QueryProductResponse toDtoQuery(Product product) {
         return new QueryProductResponse(
-                product.getName(),
-                product.getQuantity(),
                 product.getPrice()
         );
     }

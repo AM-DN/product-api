@@ -17,14 +17,13 @@ class ProductServiceImplTest {
     private ProductDataProvider productDataProvider;
 
     @Test
-    void testCreateProduct() {
+    void testCreateProduct() { 
         Product product = ProductFactory.createProduct();
         Mockito.when(productDataProvider.save(Mockito.any(Product.class))).thenReturn(product);
         ProductServiceImpl productService = new ProductServiceImpl(productDataProvider);
         Product savedOrder = productService.create(product);
         Assertions.assertEquals(product.getProductId(), savedOrder.getProductId());
         Assertions.assertEquals(product.getName(), savedOrder.getName());
-        Assertions.assertEquals(product.getQuantity(), savedOrder.getQuantity());
         Assertions.assertEquals(product.getPrice(), savedOrder.getPrice());
     }
 
